@@ -1,0 +1,28 @@
+.header-graphic{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:240px;
+}
+.dna-svg{ width:240px; height:92px; display:block }
+.dna-path{
+  stroke-width:3;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-dasharray:8 8;
+  animation: dash 2.6s linear infinite;
+  filter: drop-shadow(0 6px 10px rgba(13,20,30,0.08));
+}
+.dna-path-2{ stroke-dashoffset:20; animation-duration:3.2s; opacity:0.78 }
+
+.helix-dots .dot{ fill:#ffffff; opacity:0.9; transform-origin:center; animation: pulse 1.4s ease-in-out infinite }
+.helix-dots .dot:nth-child(2){ animation-delay:0.25s }
+.helix-dots .dot:nth-child(3){ animation-delay:0.5s }
+.helix-dots .dot:nth-child(4){ animation-delay:0.75s }
+
+.status-box{ stroke:transparent; opacity:0.98 }
+.status-box.ok{ fill:#10b981 }
+.status-box.off{ fill:#ef4444 }
+
+@keyframes dash{ to{ stroke-dashoffset: -32 } }
+@keyframes pulse{ 0%{ transform:scale(0.85); opacity:0.6 } 50%{ transform:scale(1.15); opacity:1 } 100%{ transform:scale(0.85); opacity:0.6 } }

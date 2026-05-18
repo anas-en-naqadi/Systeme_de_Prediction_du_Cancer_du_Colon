@@ -1,0 +1,117 @@
+# Python Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+.env
+.env.local
+.env*.local
+
+# Python Runtime
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Testing
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.hypothesis/
+
+# IDE & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-workspace
+*.sublime-project
+.vim/
+
+# OS Specific
+Thumbs.db
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Node.js / NPM
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Frontend Build Outputs
+app/frontend/dist/
+app/frontend/build/
+
+# Generated ML Artifacts (training output)
+# Note: Uncomment if you want to track generated models in git
+# If not tracking, these will be in .gitignore
+model/model.pkl
+model/scaler.pkl
+model/selected_genes.json
+model/model_metadata.json
+
+# Generated Reports & Visualizations
+training/reports/
+*.png
+*.jpg
+
+# Logs
+*.log
+logs/
+
+# Temporary Files
+*.tmp
+*.bak
+*.swp
+temp/
+tmp/
+
+# Docker Artifacts
+.dockerignore
+
+# Environment Configuration
+.env.development
+.env.production
+.env.test
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# Data Files (if storing locally)
+*.csv
+!training/data/colon_cancer_dataset.csv
+
+# Miscellaneous
+.cache/
+*.seed
+*.pid
+.vagrant
+.ruby-version

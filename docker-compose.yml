@@ -1,0 +1,63 @@
+version: '3.8'
+
+services:
+  training:
+    build:
+      context: ./training
+      dockerfile: Dockerfile
+    container_name: colon_training
+    restart: 'no'
+    volumes:
+      - model:/app/model
+      - ./training:/app/training:ro
+    working_dir: /app/training
+    command: ["python", "train.py"]
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  backend:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    container_name: colon_backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    volumes:
+      - model:/app/model:ro
+      - ./app:/app:ro
+    depends_on:
+      - training
+    environment:
+      - MODEL_PATH=/app/model/model.pkl
+      - SCALER_PATH=/app/model/scaler.pkl
+      - SELECTED_GENES_PATH=/app/model/selected_genes.json
+      - PYTHONUNBUFFERED=1
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8000/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  frontend:
+    build:
+      context: ./app/frontend
+      dockerfile: Dockerfile
+    container_name: colon_frontend
+    restart: unless-stopped
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    environment:
+      - VITE_API_BASE_URL=http://host.docker.internal:8000
+    volumes:
+      - ./app/frontend:/usr/src/app:ro
+
+volumes:
+  model:
+    driver: local
+
+networks:
+  default:
+    driver: bridge
