@@ -167,11 +167,12 @@ export default function App() {
 
     try {
       setPredicting(true);
-      setResult(null);
+
       const response = await predict(payload);
+
       setResult(response);
     } catch (error) {
-      setToast({ type: 'error', message: toToastMessage(error) });
+      setToast({ type: "error", message: toToastMessage(error) });
     } finally {
       setPredicting(false);
     }
