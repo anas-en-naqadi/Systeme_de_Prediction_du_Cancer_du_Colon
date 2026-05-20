@@ -1,0 +1,68 @@
+{
+  "selected_genes": [
+    "M22382",
+    "M63391",
+    "T62947",
+    "Z50753",
+    "R87126",
+    "X63629"
+  ],
+  "selection_scores": [
+    0.8625,
+    0.9324999999999999,
+    0.9675,
+    0.9724999999999999,
+    0.9775,
+    0.9775
+  ],
+  "ranking_progression": [
+    {
+      "step": 1,
+      "feature": "M22382",
+      "cv_mean_auc": 0.8625,
+      "cv_std_auc": 0.03557562367689428,
+      "improvement": 0.8625,
+      "subset_size": 1
+    },
+    {
+      "step": 2,
+      "feature": "M63391",
+      "cv_mean_auc": 0.9324999999999999,
+      "cv_std_auc": 0.07566372975210779,
+      "improvement": 0.06999999999999984,
+      "subset_size": 2
+    },
+    {
+      "step": 3,
+      "feature": "T62947",
+      "cv_mean_auc": 0.9675,
+      "cv_std_auc": 0.031224989991991983,
+      "improvement": 0.03500000000000014,
+      "subset_size": 3
+    },
+    {
+      "step": 4,
+      "feature": "Z50753",
+      "cv_mean_auc": 0.9724999999999999,
+      "cv_std_auc": 0.03391164991562633,
+      "improvement": 0.004999999999999893,
+      "subset_size": 4
+    },
+    {
+      "step": 5,
+      "feature": "R87126",
+      "cv_mean_auc": 0.9775,
+      "cv_std_auc": 0.02783882181415012,
+      "improvement": 0.0050000000000001155,
+      "subset_size": 5
+    },
+    {
+      "step": 6,
+      "feature": "X63629",
+      "cv_mean_auc": 0.9775,
+      "cv_std_auc": 0.02783882181415012,
+      "improvement": 0.0,
+      "subset_size": 6
+    }
+  ]
+}

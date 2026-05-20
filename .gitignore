@@ -69,13 +69,13 @@ yarn.lock
 app/frontend/dist/
 app/frontend/build/
 
-# Generated ML Artifacts (training output)
-# Note: Uncomment if you want to track generated models in git
-# If not tracking, these will be in .gitignore
-model/model.pkl
-model/scaler.pkl
-model/selected_genes.json
-model/model_metadata.json
+# # Generated ML Artifacts (training output)
+# # Note: Uncomment if you want to track generated models in git
+# # If not tracking, these will be in .gitignore
+# model/model.pkl
+# model/scaler.pkl
+# model/selected_genes.json
+# model/model_metadata.json
 
 # Generated Reports & Visualizations
 training/reports/

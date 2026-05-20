@@ -159,8 +159,8 @@ Interactive docs are available at `/docs` and `/redoc` when the backend is runni
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/anas-en-naqadi/Syst-me_de_Pr-diction_du_Cancer_du_C-lon.git
-cd Syst-me_de_Pr-diction_du_Cancer_du_C-lon
+git clone https://github.com/anas-en-naqadi/Systeme_de_Prediction_du_Cancer_du_Colon.git
+cd Systeme_de_Prediction_du_Cancer_du_Colon
 ```
 
 ### 2. Train or refresh the model artifacts
